@@ -1,0 +1,266 @@
+@charset "UTF-8";
+
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/*Filter styles*/
+.saturate {-webkit-filter: saturate(3); filter: saturate(3);}
+.grayscale {-webkit-filter: grayscale(100%); filter: grayscale(100%);}
+.contrast {-webkit-filter: contrast(160%); filter: contrast(160%);}
+.brightness {-webkit-filter: brightness(0.25); filter: brightness(0.25);}
+.blur {-webkit-filter: blur(3px); filter: blur(3px);}
+.invert {-webkit-filter: invert(100%); filter: invert(100%);}
+.sepia {-webkit-filter: sepia(100%); filter: sepia(100%);}
+.huerotate {-webkit-filter: hue-rotate(180deg); filter: hue-rotate(180deg);}
+.rss.opacity {-webkit-filter: opacity(50%); filter: opacity(50%);}
+
+
+
+#circlewhite {
+	width: 30px;
+	height: 30px;
+	background: white;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+
+/* Cleaner, but slightly less support: use "50%" as value */
+
+
+#pacman {
+  width: 0px;
+  height: 0px;
+  border-right: 60px solid transparent;
+  border-top: 60px solid red;
+  border-left: 60px solid red;
+  border-bottom: 60px solid red;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+
+
+
+@-webkit-keyframes slowSpeedIn2 {
+  from {
+    -webkit-transform: rotate({-130deg}) translate(12em) rotate(-{-130deg});
+    transform: rotate({-130deg}) translate(12em) rotate(-{-130deg});
+	transform-origin: bottom 60px;
+    opacity: 1;
+	position: absolute;
+  }
+  
+    10%{	  
+	transform-origin: bottom 40px;
+  }
+  
+    30%{
+	  transform-origin: bottom 0px;
+  }
+
+    60% {
+    -webkit-transform: rotate({-120deg}) translate(50em) rotate(-{-120deg});;
+    transform: rotate({-120deg}) translate(50em) rotate(-{-120deg});;
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: rotate(-110deg) translate(50em) rotate(-110deg});;
+    transform: rotate({-110deg}) translate(50em) rotate(-{-110deg});;
+    opacity: 1;
+  }
+  
+  
+  to {
+    -webkit-transform: rotate(-90deg) translate3d(0, 0, 0);
+    transform: rotate(-90deg) translate3d(0, 0, 0);
+    opacity: 1;
+	position: absolute;
+  }
+}
+
+@keyframes slowSpeedIn2 {
+  from {
+    -webkit-transform: rotate({-130deg}) translate(400em) rotate(-{-130deg});
+	transform:rotate({-130deg}) translate(400em) rotate(-{-130deg});
+		transform-origin: bottom 60px;
+    opacity: 1;
+	position: absolute;
+  }
+  
+  10%{	  
+	transform-origin: bottom 40px;
+  }
+  
+  30%{
+	  transform-origin: bottom 0px;
+  }
+  
+
+    60% {
+    -webkit-transform: rotate({-120deg}) translate(400em) rotate(-{-120deg});;
+    transform: rotate({-120deg}) translate(400em) rotate(-{-120deg});;
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: rotate(-110deg) translate(400em) rotate(-110deg});;
+    transform: rotate(-110deg) translate(400em) rotate(-110deg});;
+    opacity: 1;
+  }
+  
+  to {
+    -webkit-transform: rotate(-90deg) translate3d(0%, 0, 0);
+	transform:rotate(-90deg) translate3d(0%, 0, 0);
+    opacity: 1;
+	position: absolute;
+  }
+}
+
+.slowSpeedIn2 {
+  -webkit-animation-name: slowSpeedIn2;
+  animation-name: slowSpeedIn2;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+      -webkit-animation-duration: 11s;
+    animation-duration: 11s;
+}
+
+
+/* Butterfly animations */
+
+@keyframes flyInFarBottomRight{
+	from{
+		transform:rotate(190deg) translate(-70em) rotate(-230deg) translate3d(0,300%, 0);;
+	}
+	
+	to{
+		transform:transform: rotate(-120deg) translate(-400em, -300em);
+	}
+}
+.flyInFarBottomRight{
+	transform: translate(-100em, -150em);
+	position:absolute;
+	animation: 21s flyInFarBottomRight;
+}
+
+@keyframes flyInFarBottomRight2{
+	from{
+		transform:rotate(190deg) translate(-40em) rotate(-210deg) translate3d(0,300%, 0);;
+	}
+	
+	to{
+		transform:transform: rotate(-120deg) translate(-400em, -300em);
+	}
+}
+.flyInFarBottomRight2{
+	transform: translate(-30em, -100em);
+	position:absolute;
+	animation: 17s flyInFarBottomRight2;
+}
+
+@keyframes flyInFarBottomRightToLeft{
+	from{
+		transform:rotate(190deg) translate(-110em) rotate(-210deg) translate3d(60%,230%, 0);;
+	}
+	
+	to{
+		transform:transform: rotate(-140deg) translate(-400em, -200em);
+	}
+}
+.flyInFarBottomRightToLeft{
+	transform: translate(-170em, -100em) rotate(-120deg);
+	position:absolute;
+	animation: 23s flyInFarBottomRightToLeft;
+}
+
+@keyframes flyInFarBottomToTopLeft{
+	from{
+		transform:rotate(220deg) translate(-50em) rotate(-190deg) translate3d(110%,80%, 0);;
+	}
+	
+	to{
+		transform:transform: rotate(-140deg) translate(-400em, -200em);
+	}
+}
+.flyInFarBottomToTopLeft{
+	transform: translate(-40em, -90em) rotate(-75deg);
+	position:absolute;
+	animation: 16s flyInFarBottomToTopLeft;
+}
+
+@keyframes flyInBottomRight{
+	from{
+		transform:rotate(190deg) translate(-70em) rotate(-230deg) translate3d(0,500%, 0);;
+	}
+	
+	36%{
+		transform: rotate(190deg) translate(-10em) rotate(90deg);
+	}
+	60% {
+		transform: rotate(-80deg) ;
+	}
+	to{
+		transform:transform: rotate(-90deg) translate3d(0, 0, 0);
+	}
+}
+.flyInBottomRight{
+	position:relative;
+	animation: 15s flyInBottomRight;
+}
+
+
+/* End Butterfly animations */
+
+
+@keyframes slowSpeedIn {
+  from {
+    -webkit-transform: rotate(-130deg) translate3d(0, 1600%, 0);
+	transform:rotate(-130deg) translate3d(0, 1600%, 0);
+		transform-origin: bottom 60px;
+    opacity: 1;
+  }
+  
+  10%{	  
+	transform-origin: bottom 40px;
+  }
+  
+  30%{
+	  transform-origin: bottom 0px;
+  }
+  
+
+    60% {
+    -webkit-transform: rotate(-120deg) ;
+    transform: rotate(-120deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: rotate(-110deg) ;
+    transform: rotate(-110deg) ;
+    opacity: 1;
+  }
+  
+  to {
+    -webkit-transform: rotate(-90deg) translate3d(0%, 0, 0);
+	transform:rotate(-90deg) translate3d(0%, 0, 0);
+    opacity: 1;
+  }
+}
+
+.slowSpeedIn {
+  -webkit-animation-name: slowSpeedIn;
+  animation-name: slowSpeedIn;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+      -webkit-animation-duration: 11s;
+    animation-duration: 11s;
+}
