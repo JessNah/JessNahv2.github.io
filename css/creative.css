@@ -156,9 +156,9 @@ header {
   -o-background-size: cover;
   background-position: center;
   background-image: url('../img/header.jpg');
+  overflow: hidden;
   text-align: center;
   color: white;
-  overflow:hidden
 }
 header .header-content {
   position: relative;

@@ -615,6 +615,7 @@
                     _queueCallback('reveal', elem, delayed);
                     elem.revealing = true;
                     elem.seen = true;
+					Console.log(elem.id);
 
                     if (elem.sequence) {
                         _queueNextInSequence(elem, delayed);

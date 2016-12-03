@@ -6,6 +6,7 @@ var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
+var gutil = require('gulp-util');
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -15,6 +16,8 @@ var banner = ['/*!\n',
     ' */\n',
     ''
 ].join('');
+
+
 
 // Compile LESS files from /less into /css
 gulp.task('less', function() {
@@ -41,7 +44,10 @@ gulp.task('minify-css', ['less'], function() {
 // Minify JS
 gulp.task('minify-js', function() {
     return gulp.src('js/creative.js')
-        .pipe(uglify())
+        .pipe(uglify().on('error', function(err) {
+			gutil.log(gutil.colors.red('[Error]'), err.toString());
+			this.emit('end');
+			}))
         .pipe(header(banner, { pkg: pkg }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('js'))
