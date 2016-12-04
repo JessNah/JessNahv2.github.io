@@ -49,7 +49,8 @@ p {
   background-color: #353535;
   padding: 2px 0;
   margin-top:0;
-  height:54em;
+  height:47em;
+  position: relative;
 }
 .bg-dark {
   background-color: #222222;
@@ -293,6 +294,10 @@ header .header-content .header-content-inner p {
 .no-gutter > [class*='col-'] {
   padding-right: 0;
   padding-left: 0;
+}
+.btn-lower{
+  bottom: 11em;
+  position: absolute;
 }
 .btn-default {
   color: #222222;

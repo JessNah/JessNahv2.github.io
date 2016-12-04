@@ -1,3 +1,5 @@
+var interactiveShown = false;
+
 (function($) {
     "use strict"; // Start of use strict
 		
@@ -61,5 +63,6 @@
             tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
         }
     });
-
+	
+	
 })(jQuery); // End of use strict
