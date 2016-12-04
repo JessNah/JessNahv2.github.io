@@ -297,8 +297,9 @@ header .header-content .header-content-inner p {
   padding-left: 0;
 }
 .btn-lower{
-  bottom: 4em;
-  position: absolute;
+  bottom: 7em;
+  position: relative;
+  vertical-align: center;
 }
 .btn-default {
   color: #222222;
