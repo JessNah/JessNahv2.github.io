@@ -201,12 +201,16 @@
 	from{
 		transform:rotate(190deg) translate(-70em) rotate(-230deg) translate3d(0,500%, 0);;
 	}
-	
+
 	36%{
 		transform: rotate(190deg) translate(-10em) rotate(90deg);
 	}
-	60% {
+	
+	55% {
 		transform: rotate(-80deg) ;
+	}
+	65%{
+		transform: translate3d(0, 0, 0);
 	}
 	to{
 		transform:transform: rotate(-90deg) translate3d(0, 0, 0);
@@ -214,7 +218,7 @@
 }
 .flyInBottomRight{
 	position:relative;
-	animation: 15s flyInBottomRight;
+	animation: 14s flyInBottomRight;
 }
 
 
