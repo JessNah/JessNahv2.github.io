@@ -8,6 +8,10 @@
   animation-fill-mode: both;
 }
 
+.delay{
+	animation-delay: 5s;
+}
+
 /*Filter styles*/
 .saturate {-webkit-filter: saturate(3); filter: saturate(3);}
 .grayscale {-webkit-filter: grayscale(100%); filter: grayscale(100%);}

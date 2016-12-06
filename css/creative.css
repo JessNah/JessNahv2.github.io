@@ -49,7 +49,7 @@ p {
   background-color: #353535;
   padding: 2px 0;
   margin-top:0;
-  height:47em;
+  height:52em; /*47em */
   position: relative;
 }
 .bg-dark {
