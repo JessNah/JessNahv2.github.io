@@ -25,23 +25,31 @@ function myFunction() {
 	   document.getElementById("ballz5").className = "ball";
 	   document.getElementById("ballz6").className = "ball";
 	   document.getElementById("ballz7").className = "ball";
+	   setTimeout(portraitTextAppear, 1000);
+	   
 	}
 	if ((document.body.scrollTop > 920 || document.documentElement.scrollTop > 920) && dotsAnimated == true && dropped == false) {
 	   dropped = true;
 	   document.getElementById("ballzContains").className = "dropped1";
-	   setTimeout(myFunction3, 1500);
+	   setTimeout(hideBalls, 1500);
 	}
 }
 
 
-function myFunction3() {    
+function hideBalls() {    
 	   document.getElementById("ballzContains").style.visibility = "hidden";
+}
+
+function portraitTextAppear() { 
+	   document.getElementById("portraitText").style.visibility = "visible";
+	   document.getElementById("portraitText").className = "animated bounceInLeft text-center";
 }
 
 
 function myFunction2() {    
 	   document.getElementById("spaceText").style.visibility = "visible";
 }
+
 
 
 })(jQuery); // End of use strict

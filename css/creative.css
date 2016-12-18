@@ -16,9 +16,18 @@ hr {
   border-width: 3px;
   max-width: 50px;
 }
+.hrAbout {
+  margin-left: 0.5em;
+  border-bottom: 3px solid rgba(255,255,255,.25);
+  border-color: #FFFFFF;
+  border-width: 3px;
+  max-width: 50px;
+}
+
 hr.light {
   border-color: white;
 }
+
 a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
