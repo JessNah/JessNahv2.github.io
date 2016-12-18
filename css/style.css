@@ -3,12 +3,14 @@
 
 .container-ball {
     height: 5px;
-    padding-top: 20px;
+    padding-top: 4vw; /*20px*/
+	padding-bottom: 2vw; /*wasnt here*/
     margin: 0 auto;
 	position: relative;
-	word-spacing: 120px;
+	word-spacing: 5vw; /*120px*/
 	text-align:center;
 	margin-top:2em;
+	margin-bottom:2em; /*wasnt here*/
 }
 
 .img-centered {
@@ -21,11 +23,73 @@
   background-color: #222222;
 }
 
+.rocketFar{	    
+	-webkit-animation: rocketFar-A 6s forwards;
+    -moz-animation: rocketFar-A 6s forwards;
+    animation: rocketFar-A 6s forwards ;	
+	-webkit-animation-fill-mode:forwards;
+   -moz-animation-fill-mode:forwards; /*FF 5+*/
+   -o-animation-fill-mode:forwards; /*Not implemented yet*/
+   -ms-animation-fill-mode:forwards; /*IE 10+*/
+   animation-fill-mode:forwards; /*when the spec is finished*/	
+}
+
+@-webkit-keyframes rocketFar-A {
+	0%{-webkit-transform: translateX(-40%) rotate(-50deg) translateX(200px) rotate(0deg);}
+    100% {
+        -webkit-transform: translateX(82%) rotate(70deg) translateX(70%) rotate(-30deg);
+    }
+}
+@-moz-keyframes rocketFar-A {
+	0%{-moz-transform: translateX(-40%) rotate(-50deg) translateX(200px) rotate(0deg);}
+    100% {
+        -moz-transform: translateX(82%) rotate(70deg) translateX(70%) rotate(-30deg);
+    }
+}
+@keyframes rocketFar-A {
+	0%{transform: translateX(-40%) rotate(-50deg) translateX(200px) rotate(0deg);}
+    100% {
+        transform: translateX(82%) rotate(70deg) translateX(70%)  rotate(-30deg);
+    }
+}
+
+.rocketClose{	    
+	-webkit-animation: rocketClose-A 3s forwards;
+    -moz-animation: rocketClose-A 3s forwards;
+    animation: rocketClose-A 3s forwards ;	
+	-webkit-animation-fill-mode:forwards;
+   -moz-animation-fill-mode:forwards; /*FF 5+*/
+   -o-animation-fill-mode:forwards; /*Not implemented yet*/
+   -ms-animation-fill-mode:forwards; /*IE 10+*/
+   animation-fill-mode:forwards; /*when the spec is finished*/	
+}
+
+
+@-webkit-keyframes rocketClose-A {
+	0%{-webkit-transform: translateX(100%) ;}
+    100% {
+        -webkit-transform: translate(-20%,50em);
+    }
+}
+@-moz-keyframes rocketClose-A {
+	0%{-moz-transform: translateX(100%);}
+    100% {
+        -moz-transform: translate(-20%,50em);
+    }
+}
+@keyframes rocketClose-A {
+	0%{transform: translateX(100%);}
+    100% {
+        transform: translate(-20%,50em);
+    }
+}
+
+
 .ball {
-    width: 15px;
-    height: 4px;
-	padding-left:50px;
-    border-radius: 30px;
+    width: 1.6vw; /*15px*/
+    height: 0.15vw; /*4px*/
+	padding-left:3vw; /*50px*/
+    border-radius: 6vw; /*30px*/
 }
 
 .ball:nth-child(1) {

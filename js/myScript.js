@@ -1,6 +1,8 @@
 var interactiveShown = false;
 var dotsAnimated = false;
 var dropped = false;
+var rocketFar = false;
+var rocketClose = false;
 
 (function($) {
     "use strict"; // Start of use strict
@@ -16,6 +18,9 @@ function myFunction() {
 	   document.getElementById("spaceText").className = "animated delay swing";
 	   setTimeout(myFunction2, 2500);
 	}*/
+	if ((document.body.scrollTop > 860 || document.documentElement.scrollTop > 860) && rocketFar == false) {		
+	   setTimeout(FireFarRocket, 1000);
+	}
 	if ((document.body.scrollTop > 550 || document.documentElement.scrollTop > 550) && dotsAnimated == false) {
 	   dotsAnimated = true;
 	   document.getElementById("ballz1").className = "ball";
@@ -35,9 +40,35 @@ function myFunction() {
 	}
 }
 
+function FireFarRocket() { 
+		document.getElementById("rockFar").style.visibility = "visible";
+		document.getElementById("rockFar").className = "animated rocketFar";
+		rocketFar = true;
+	    setTimeout(FireCloseRocket, 4000);
+}
+
+function FireCloseRocket() { 
+	if(rocketFar == true && rocketClose == false)
+	{
+		var image_x = document.getElementById('rockFar');
+		image_x.parentNode.removeChild(image_x);
+	   document.getElementById("rockClose").style.visibility = "visible";
+	   document.getElementById("rockClose").className = "animated rocketClose";
+	   rocketClose = true;
+	    setTimeout(removeClose, 4000);
+	}
+}
+
+function removeClose() { 
+		var image_x = document.getElementById('rockClose');
+		image_x.parentNode.removeChild(image_x);
+}
+
 
 function hideBalls() {    
 	   document.getElementById("ballzContains").style.visibility = "hidden";
+	   var image_x = document.getElementById('ballzContains');
+		image_x.parentNode.removeChild(image_x);
 }
 
 function portraitTextAppear() { 

@@ -20,7 +20,7 @@ hr {
   margin-left: 0.5em;
   border-bottom: 3px solid rgba(255,255,255,.25);
   border-color: #FFFFFF;
-  border-width: 3px;
+  border-width: 0.18vw;
   max-width: 50px;
 }
 
@@ -247,6 +247,10 @@ header .header-content .header-content-inner p {
 }
 .service-box p {
   margin-bottom: 0;
+}
+
+.overflowHid{
+	overflow:hidden;
 }
 
 .portfolio-box {
