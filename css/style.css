@@ -287,7 +287,15 @@ height: 100%;
 background-size: 100% 100%;
 }
 
+img.grayscale {
+  filter: grayscale(100%); /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+}
 
+img.grayscale:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
 
 #portfolio .portfolio-item {
   margin: 0 0 15px;
