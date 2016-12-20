@@ -48,6 +48,7 @@ function myFunction() {
 	   setTimeout(showTextArt, 3000);	   
 		showText = true;
 	}
+	console.log(document.body.scrollTop);
 }
 
 
