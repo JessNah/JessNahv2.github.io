@@ -3,6 +3,10 @@ var dotsAnimated = false;
 var dropped = false;
 var rocketFar = false;
 var rocketClose = false;
+var showText = false;
+var index = 0;
+
+var textToShow = "//&copy; Jessica Nahulan";
 
 (function($) {
     "use strict"; // Start of use strict
@@ -38,6 +42,31 @@ function myFunction() {
 	   document.getElementById("ballzContains").className = "dropped1";
 	   setTimeout(hideBalls, 1500);
 	}
+	
+	if ((document.body.scrollTop > 2500 || document.documentElement.scrollTop > 2500) && showText == false) {	
+		setTimeout(paintBrush, 2500);
+	   setTimeout(showTextArt, 3000);	   
+		showText = true;
+	}
+}
+
+
+function paintBrush() { 
+		document.getElementById("myBrush").style.visibility = "visible";
+		document.getElementById("myBrush").className = "artBrush2";	
+}
+
+function showTextArt() { 
+		document.getElementById("artText").style.visibility = "visible";
+		if(index==2){
+			document.getElementById("artText").innerText  = document.getElementById("artText").innerText + '\u00A9';
+			index = 8;
+		}	
+		else{
+		document.getElementById("artText").innerText  = document.getElementById("artText").innerText + textToShow.charAt(index);
+		index++;
+		}
+		setTimeout(showTextArt, 150);
 }
 
 function FireFarRocket() { 
