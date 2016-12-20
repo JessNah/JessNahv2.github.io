@@ -43,12 +43,11 @@ function myFunction() {
 	   setTimeout(hideBalls, 1500);
 	}
 	
-	if ((document.body.scrollTop > 2500 || document.documentElement.scrollTop > 2500) && showText == false) {	
+	if ((document.body.scrollTop > 2450 || document.documentElement.scrollTop > 2450) && showText == false) {	
 		setTimeout(paintBrush, 2500);
 	   setTimeout(showTextArt, 3000);	   
 		showText = true;
 	}
-	console.log(document.body.scrollTop);
 }
 
 
