@@ -53,8 +53,8 @@ function myFunction() {
 
 function paintBrush() { 
 		document.getElementById("myBrush").style.visibility = "visible";
-		document.getElementById("myBrush").className = "artBrush2";	
-		//document.getElementById("rotateBrush").className = "artBrushR";
+		document.getElementById("myBrush").className = "artBrushRR";	
+		document.getElementById("rotateBrush").className = "artBrush2";
 }
 
 function showTextArt() { 
