@@ -68,6 +68,13 @@ p {
   height:4em; /*47em */
   position: relative;
 }
+.bg-aboutMe{
+  background-color: #f05f40 ;
+  padding: 2px 0;
+  margin-top:0;
+  height:4em; /*47em */
+  position: relative;
+}
 .bg-dark {
   background-color: #222222;
   color: white;

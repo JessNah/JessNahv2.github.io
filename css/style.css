@@ -3,13 +3,13 @@
 
 .container-ball {
     height: 5px;
-    padding-top: 4vw; /*20px*/
+    padding-top: 2vw; /*20px*/
 	padding-bottom: 2vw; /*wasnt here*/
     margin: 0 auto;
 	position: relative;
 	word-spacing: 5vw; /*120px*/
 	text-align:center;
-	margin-top:2em;
+	margin-top:0.5em;
 	margin-bottom:2em; /*wasnt here*/
 }
 
@@ -66,6 +66,54 @@
 	}
     100% {
         transform: translate(20em,0px);
+    }
+}
+
+.artBrushR{	    
+	-webkit-animation: artBrush-R  3s forwards;
+    -moz-animation: artBrush-R  3s forwards;
+    animation: artBrush-R  3s forwards ;	
+	-webkit-animation-fill-mode:forwards;
+   -moz-animation-fill-mode:forwards; /*FF 5+*/
+   -o-animation-fill-mode:forwards; /*Not implemented yet*/
+   -ms-animation-fill-mode:forwards; /*IE 10+*/
+   animation-fill-mode:forwards; /*when the spec is finished*/	
+}
+
+@-webkit-keyframes artBrush-R {
+	0%{-webkit-transform: rotate(0deg) translate(2px);}
+	0%{
+		-webkit-transform: rotate(0deg) translateX(2px);
+	}
+	50%{
+		-webkit-transform: rotate(-50deg) translateX(2px);
+	}
+    100% {
+        -webkit-transform: rotate(50deg) translateX(2px);
+    }
+}
+@-moz-keyframes artBrush-R {
+	0%{-moz-transform: rotate(0deg) translateX(2px);}
+	0%{
+		-moz-transform: rotate(0deg) translateX(2px);
+	}
+	50%{
+		-moz-transform: rotate(-50deg) translateX(2px);
+	}
+    100% {
+        -moz-transform: rotate(50deg) translateX(2px) ;
+    }
+}
+@keyframes artBrush-R {
+	0%{transform: rotate(0deg) translateX(2px);}
+	0%{
+		transform: rotate(0deg) translateX(2px) ;
+	}
+	50%{
+		transform: rotate(-50deg) translateX(2px);
+	}
+    100% {
+        transform: rotate(50deg) translateX(2px);
     }
 }
 
