@@ -19,6 +19,13 @@
 		display:none;
 	}
 }
+/*
+@media (max-height: 767px) {
+  .btn {
+    display: block;
+	width: 20%;
+  }
+}*/
 
 .whiteRectangle {
 	width: 30em;
