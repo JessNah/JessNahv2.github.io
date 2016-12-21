@@ -37,6 +37,47 @@
 }
 
 
+
+.bikeMoveRight{	    
+	-webkit-animation: bikeMove-A 6s forwards;
+    -moz-animation: bikeMove-A 6s forwards;
+    animation: bikeMove-A 6s forwards ;	
+	-webkit-animation-fill-mode:forwards;
+   -moz-animation-fill-mode:forwards; /*FF 5+*/
+   -o-animation-fill-mode:forwards; /*Not implemented yet*/
+   -ms-animation-fill-mode:forwards; /*IE 10+*/
+   animation-fill-mode:forwards; /*when the spec is finished*/	
+}
+
+@-webkit-keyframes bikeMove-A {
+	0%{-webkit-transform: translate(0%);}
+	0%{
+		-webkit-transform: translate(0em,0px);
+	}
+    100% {
+        -webkit-transform: translate(160em,0px) ;
+    }
+}
+@-moz-keyframes bikeMove-A {
+	0%{-moz-transform: translate(0%) ;}
+	0%{
+		-moz-transform: translate(0em,0px);
+	}
+    100% {
+        -moz-transform: translate(160em,0px) ;
+    }
+}
+@keyframes bikeMove-A {
+	0%{transform: translate(0%);}
+	0%{
+		transform: translate(0em,0px);
+	}
+    100% {
+        transform: translate(160em,0px);
+    }
+}
+
+
 .artBrush2{	    
 	-webkit-animation: artBrush-A 6s forwards;
     -moz-animation: artBrush-A 6s forwards;

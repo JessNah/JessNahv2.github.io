@@ -5,6 +5,7 @@ var rocketFar = false;
 var rocketClose = false;
 var showText = false;
 var index = 0;
+var showBike = false;
 
 var textToShow = "//&copy; Jessica Nahulan";
 
@@ -48,8 +49,20 @@ function myFunction() {
 	   setTimeout(showTextArt, 2000);	   
 		showText = true;
 	}
+	
+		if ((document.body.scrollTop > 3050 || document.documentElement.scrollTop > 3050) && showBike == false) {	
+		setTimeout(bike, 2500);
+		showBike = true;
+	}
+	
+	
 }
 
+
+function bike() { 
+		document.getElementById("myBike").style.visibility = "visible";
+		document.getElementById("myBike").className = "bikeMoveRight bigScreenOnly";
+}
 
 function paintBrush() { 
 		document.getElementById("myBrush").style.visibility = "visible";
