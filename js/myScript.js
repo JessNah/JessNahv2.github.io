@@ -43,9 +43,9 @@ function myFunction() {
 	   setTimeout(hideBalls, 1500);
 	}
 	
-	if ((document.body.scrollTop > 2450 || document.documentElement.scrollTop > 2450) && showText == false) {	
-		setTimeout(paintBrush, 2500);
-	   setTimeout(showTextArt, 3000);	   
+	if ((document.body.scrollTop > 2350 || document.documentElement.scrollTop > 2350) && showText == false) {	
+		setTimeout(paintBrush, 1500);
+	   setTimeout(showTextArt, 2000);	   
 		showText = true;
 	}
 }
