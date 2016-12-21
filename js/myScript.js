@@ -39,7 +39,7 @@ function myFunction() {
 	}
 	if ((document.body.scrollTop > 920 || document.documentElement.scrollTop > 920) && dotsAnimated == true && dropped == false) {
 	   dropped = true;
-	   document.getElementById("ballzContains").className = "dropped1";
+	   document.getElementById("ballzContains").className = "dropped1 bigScreenOnly";
 	   setTimeout(hideBalls, 1500);
 	}
 	
@@ -53,8 +53,8 @@ function myFunction() {
 
 function paintBrush() { 
 		document.getElementById("myBrush").style.visibility = "visible";
-		document.getElementById("myBrush").className = "artBrushRR";	
-		document.getElementById("rotateBrush").className = "artBrush2";
+		document.getElementById("myBrush").className = "artBrushRR bigScreenOnly";	
+		document.getElementById("rotateBrush").className = "artBrush2 bigScreenOnly";
 }
 
 function showTextArt() { 
@@ -72,7 +72,7 @@ function showTextArt() {
 
 function FireFarRocket() { 
 		document.getElementById("rockFar").style.visibility = "visible";
-		document.getElementById("rockFar").className = "animated rocketFar";
+		document.getElementById("rockFar").className = "animated rocketFar bigScreenOnly";
 		rocketFar = true;
 	    setTimeout(FireCloseRocket, 4000);
 }
@@ -83,7 +83,7 @@ function FireCloseRocket() {
 		var image_x = document.getElementById('rockFar');
 		image_x.parentNode.removeChild(image_x);
 	   document.getElementById("rockClose").style.visibility = "visible";
-	   document.getElementById("rockClose").className = "animated rocketClose";
+	   document.getElementById("rockClose").className = "animated rocketClose bigScreenOnly";
 	   rocketClose = true;
 	    setTimeout(removeClose, 4000);
 	}
